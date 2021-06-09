@@ -1,0 +1,460 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ac-update-forms\n"
+"POT-Creation-Date: 2021-06-08 17:11+0200\n"
+"PO-Revision-Date: 2021-06-08 17:12+0200\n"
+"Last-Translator: \n"
+"Language-Team: jorge@enutt.net\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-KeywordsList: _;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../ac-update-form.php:185
+msgid "Datos de acceso incorrectos."
+msgstr ""
+
+#: ../inc/ac-form-login.php:11
+msgid "Aquí puedes actualizar tus preferencias de suscripción a Grupo SPRI"
+msgstr ""
+
+#: ../inc/ac-form-login.php:12
+msgid ""
+"Para actualizar tus preferencias de suscripción, comprueba tu correo "
+"electrónico porque te hemos enviado un mensaje con los pasos para poder "
+"hacerlo."
+msgstr ""
+
+#: ../inc/ac-form-login.php:14
+msgid ""
+"Email incorrecto. El email suministrado no está en nuestra base de datos."
+msgstr ""
+
+#: ../inc/ac-form-login.php:17
+msgid "Email incorrecto. El email suministrado no tiene el formato adecuado."
+msgstr ""
+
+#: ../inc/ac-form-login.php:21 ../inc/ac-form.php:4
+msgid "Personaliza tus boletines"
+msgstr ""
+
+#: ../inc/ac-form-login.php:22
+msgid "Empieza a recibir los boletines según tus preferencias."
+msgstr ""
+
+#: ../inc/ac-form-login.php:22
+msgid "Indícanos tu <b>email</b> para verificar que realmente eres tú."
+msgstr ""
+
+#: ../inc/ac-form-login.php:24 ../inc/steps/ac-form-step5.php:7
+msgid "Email"
+msgstr ""
+
+#: ../inc/ac-form-login.php:25
+msgid "Enviar"
+msgstr ""
+
+#: ../inc/ac-form.php:5
+msgid ""
+"Indícanos las temáticas y productos de Grupo SPRI que más interesan y "
+"empieza a recibir los boletines según tus preferencias."
+msgstr ""
+
+#: ../inc/fields.php:5
+msgid "Nombre"
+msgstr ""
+
+#: ../inc/fields.php:6
+msgid "Apellidos"
+msgstr ""
+
+#: ../inc/fields.php:7
+msgid "Teléfono"
+msgstr ""
+
+#: ../inc/fields.php:15
+msgid "Tratamiento"
+msgstr ""
+
+#: ../inc/fields.php:16
+msgid "Sr."
+msgstr ""
+
+#: ../inc/fields.php:17
+msgid "Sra."
+msgstr ""
+
+#: ../inc/fields.php:19
+msgid "DNI/CIF/Pasaporte"
+msgstr ""
+
+#: ../inc/fields.php:20
+msgid "Provincia"
+msgstr ""
+
+#: ../inc/fields.php:21
+msgid "Bizkaia"
+msgstr ""
+
+#: ../inc/fields.php:22
+msgid "Gipuzkoa"
+msgstr ""
+
+#: ../inc/fields.php:23
+msgid "Araba"
+msgstr ""
+
+#: ../inc/fields.php:24 ../inc/fields.php:55
+msgid "Otros"
+msgstr ""
+
+#: ../inc/fields.php:26
+msgid "Nombre de empresa"
+msgstr ""
+
+#: ../inc/fields.php:27
+msgid "CIF"
+msgstr ""
+
+#: ../inc/fields.php:28
+msgid "Perfíl de Linkedin"
+msgstr ""
+
+#: ../inc/fields.php:29
+msgid "Sector"
+msgstr ""
+
+#: ../inc/fields.php:30
+msgid "Administración gubernamental"
+msgstr ""
+
+#: ../inc/fields.php:31
+msgid "Aeronáutica/Aviación"
+msgstr ""
+
+#: ../inc/fields.php:32
+msgid "Alimentación"
+msgstr ""
+
+#: ../inc/fields.php:33
+msgid "Automoción"
+msgstr ""
+
+#: ../inc/fields.php:34
+msgid "Banca de inversiones"
+msgstr ""
+
+#: ../inc/fields.php:35
+msgid "Biosalud"
+msgstr ""
+
+#: ../inc/fields.php:36
+msgid "Capital de riesgo y capital privado"
+msgstr ""
+
+#: ../inc/fields.php:37
+msgid "Construcción"
+msgstr ""
+
+#: ../inc/fields.php:38
+msgid "Contenidos digitales"
+msgstr ""
+
+#: ../inc/fields.php:39
+msgid "Energía"
+msgstr ""
+
+#: ../inc/fields.php:40
+msgid "Equipos Ferroviarios"
+msgstr ""
+
+#: ../inc/fields.php:41
+msgid "Fundición"
+msgstr ""
+
+#: ../inc/fields.php:42
+msgid "Industrías Marítimas"
+msgstr ""
+
+#: ../inc/fields.php:43
+msgid "Investigación"
+msgstr ""
+
+#: ../inc/fields.php:44
+msgid "Maquinaria"
+msgstr ""
+
+#: ../inc/fields.php:45
+msgid "Medioambiente"
+msgstr ""
+
+#: ../inc/fields.php:46
+msgid "Papel"
+msgstr ""
+
+#: ../inc/fields.php:47
+msgid "Petróleo y energía"
+msgstr ""
+
+#: ../inc/fields.php:48
+msgid "Seguridad del ordenador y de las redes"
+msgstr ""
+
+#: ../inc/fields.php:49
+msgid "Servicios y tecnologías de la información"
+msgstr ""
+
+#: ../inc/fields.php:50
+msgid "Siderurgia"
+msgstr ""
+
+#: ../inc/fields.php:51
+msgid "Tec. Av. Fabricación"
+msgstr ""
+
+#: ../inc/fields.php:52
+msgid "Telecomunicaciones"
+msgstr ""
+
+#: ../inc/fields.php:53
+msgid "Transporte, movilidad y logística"
+msgstr ""
+
+#: ../inc/fields.php:54
+msgid "Videojuegos"
+msgstr ""
+
+#: ../inc/fields.php:61
+msgid "Mi boletín semanal de Grupo SPRI "
+msgstr ""
+
+#: ../inc/fields.php:61
+msgid ""
+"Lo mejor de la semana: entrevistas, noticias, ayudas, agenda, formación y "
+"tendencias sobre ciberseguridad, digitalización, nuevos modelos de gestión "
+"avanzada, internacionalización, emprendimiento, infraestructuras."
+msgstr ""
+
+#: ../inc/fields.php:62
+msgid "Mi boletín mensual UP! Euskadi"
+msgstr ""
+
+#: ../inc/fields.php:62
+msgid ""
+"Una vez al mes la información sobre la red de Startups vascas y sus últimas "
+"innovaciones."
+msgstr ""
+
+#: ../inc/fields.php:63
+msgid "Mi boletín semanal Oferta y demanda tecnológica."
+msgstr ""
+
+#: ../inc/fields.php:63
+msgid ""
+"Cada semana las oportunidades del mercado en materia de transferencia "
+"tecnológica internacional."
+msgstr ""
+
+#: ../inc/fields.php:69
+msgid "Ciberseguridad "
+msgstr ""
+
+#: ../inc/fields.php:70
+msgid "Digitalización"
+msgstr ""
+
+#: ../inc/fields.php:71
+msgid "Emprendimiento"
+msgstr ""
+
+#: ../inc/fields.php:72
+msgid "I+D"
+msgstr ""
+
+#: ../inc/fields.php:73
+msgid "Innovación"
+msgstr ""
+
+#: ../inc/fields.php:74
+msgid "Internacionalización"
+msgstr ""
+
+#: ../inc/fields.php:75
+msgid "Invertir en Euskadi"
+msgstr ""
+
+#: ../inc/fields.php:76
+msgid "Invertir en inmovilizado"
+msgstr ""
+
+#: ../inc/fields.php:77
+msgid "Relanzamiento empresarial"
+msgstr ""
+
+#: ../inc/fields.php:78
+msgid "Sostenibilidad Medioambiental"
+msgstr ""
+
+#: ../inc/fields.php:79
+msgid "Fondos de Capital Riesgo"
+msgstr ""
+
+#: ../inc/fields.php:83
+msgid "Personas emprendedoras"
+msgstr ""
+
+#: ../inc/fields.php:84
+msgid "Autonómos/as"
+msgstr ""
+
+#: ../inc/fields.php:85
+msgid "Micropyme (1-10 empleados/as)"
+msgstr ""
+
+#: ../inc/fields.php:86
+msgid "Pequeña empresa (10-50)"
+msgstr ""
+
+#: ../inc/fields.php:87
+msgid "Mediana empresa (50-250)"
+msgstr ""
+
+#: ../inc/fields.php:88
+msgid "Gran empresa (+250)"
+msgstr ""
+
+#: ../inc/fields.php:89
+msgid "Agentes de la RVCTI"
+msgstr ""
+
+#: ../inc/fields.php:90
+msgid "Asociaciones"
+msgstr ""
+
+#: ../inc/fields.php:91
+msgid "Estudiantes"
+msgstr ""
+
+#: ../inc/fields.php:92
+msgid "Inversores"
+msgstr ""
+
+#: ../inc/fields.php:93
+msgid "Agentes intermedios"
+msgstr ""
+
+#: ../inc/fields.php:104
+msgid "Castellano "
+msgstr ""
+
+#: ../inc/fields.php:105
+msgid "Euskera"
+msgstr ""
+
+#: ../inc/steps/ac-form-step1.php:3
+msgid "¿Te gustaría recibir <span>todos los boletines</span>?"
+msgstr ""
+
+#: ../inc/steps/ac-form-step1.php:16 ../inc/steps/ac-form-step2.php:20
+#: ../inc/steps/ac-form-step3.php:18
+msgid "Continúa avanzando"
+msgstr ""
+
+#: ../inc/steps/ac-form-step1.php:17
+msgid "➤  Solo te quedan 3 pasos"
+msgstr ""
+
+#: ../inc/steps/ac-form-step2.php:3
+msgid "¿Con cuál de nuestros <span>perfiles de empresa</span> te identificas?"
+msgstr ""
+
+#: ../inc/steps/ac-form-step2.php:13
+msgid "Me interesa recibir la información para cualquiera de estos perfiles."
+msgstr ""
+
+#: ../inc/steps/ac-form-step2.php:21
+msgid "➤  Solo te quedan 2 pasos"
+msgstr ""
+
+#: ../inc/steps/ac-form-step3.php:3
+msgid "¿Alguna prioridad respecto a la <span>temática</span>?"
+msgstr ""
+
+#: ../inc/steps/ac-form-step3.php:11
+msgid "Me interesan los contenidos de todas estas temáticas."
+msgstr ""
+
+#: ../inc/steps/ac-form-step3.php:19
+msgid "➤  Solo te quedan 1 paso"
+msgstr ""
+
+#: ../inc/steps/ac-form-step4.php:3
+msgid "¿En qué <span>idioma</span> quieres recibirnos?"
+msgstr ""
+
+#: ../inc/steps/ac-form-step4.php:13
+msgid "Seleccionar ambos"
+msgstr ""
+
+#: ../inc/steps/ac-form-step4.php:22
+msgid "Para terminar, confírmanos tus datos"
+msgstr ""
+
+#: ../inc/steps/ac-form-step5.php:3
+msgid "Guarda tu <span>perfil</span>"
+msgstr ""
+
+#: ../inc/steps/ac-form-step5.php:13 ../inc/steps/ac-form-step5.php:36
+#, php-format
+msgid "Elige tu %s"
+msgstr ""
+
+#: ../inc/steps/ac-form-step5.php:47
+msgid "Protección de datos*"
+msgstr ""
+
+#: ../inc/steps/ac-form-step5.php:48
+msgid ""
+"Sí, he LEÍDO y ACEPTO en todos sus términos la Información legal incluida en "
+"la <a href=\"https://www.spri.eus/es/politica-de-privacidad/\">política de "
+"privacidad</a>"
+msgstr ""
+
+#: ../inc/steps/ac-form-step5.php:49
+msgid ""
+"SPRI-Agencia Vasca de Desarrollo Empresarial (www.spri.eus), como "
+"responsable del tratamiento y con quien puede contactar mediante el mail "
+"lopd@spri.eus recoge sus datos personales con la finalidad de prestarle el "
+"adecuado servicio de atención en relación a nuestros servicios y programas "
+"de ayudas. Para conocer en detalle los derechos que le asisten y disponer de "
+"información ampliada respecto a las finalidades y legitimación del "
+"tratamiento puede dirigirse a esta página."
+msgstr ""
+
+#: ../inc/steps/ac-form-step5.php:52
+msgid "Guarda tu perfil"
+msgstr ""
+
+#: ../inc/steps/ac-form-step6.php:3
+#, php-format
+msgid "Gracias por tu interés en nuestras comunicaciones %s"
+msgstr ""
+
+#: ../inc/steps/ac-form-step6.php:4
+msgid ""
+"Has completado tu suscripción correctamente. Ahora sí podemos mantenerte al "
+"día."
+msgstr ""
+
+#: ../inc/steps/ac-form-step6.php:5
+msgid "¡Gracias por tu confianza!"
+msgstr ""
+
+#: ../inc/steps/ac-form-step6.php:6
+msgid "Equipo de Comunicación del Grupo SPRI"
+msgstr ""

@@ -1,0 +1,527 @@
+<style>
+#logincontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 66vh;
+  background-color: #eeefef;
+}
+
+#ac-form-login {
+  max-width: 1200px;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#ac-form-login img,
+#maintitle img {
+  max-width: 50px;
+  margin: 0px 0px 20px 0px;
+}
+
+#ac-form-login h1,
+#maintitle h1 {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size:35px;
+  font-weight:600;
+  line-height:42px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+#ac-form-login p {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+#ac-form-login > div {
+  margin-top: 30px;
+}
+
+#ac-form-login input[type=email] {
+  box-shadow: 0px 0px 8px 4px #cecece;
+  border: none;
+  padding: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  color: #9d9d9c;
+  margin-right: -4px;
+  padding: 19px;
+}
+
+#ac-form-login button {
+  border: none;
+  background: #ff0000;
+  background: -webkit-linear-gradient(135deg, #ff0000 30%, #ac196d 100%);
+  background: linear-gradient(135deg, #ff0000 30%, #ac196d 100%);
+  padding: 22px 70px 23px 50px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  color: #fff;
+  position: relative;
+  border-radius: 0px;
+}
+
+#ac-form-login button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 21px;
+  right: 35px;
+  width: 22px;
+  height: 21px;
+  background: transparent url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/arrow.png') center center no-repeat;s
+}
+
+@media (max-width: 455px) {
+  #ac-form-login > div {
+    text-align: center;
+  }
+  #ac-form-login button {
+    width: 100%;
+  }
+  #ac-form-login input[type=email] {
+    margin-right: 0px;
+    width: 100%;
+  }
+}
+
+#ac-form {
+  background-color: #ffffff;
+  padding: 60px 0px;
+  overflow: hidden;
+}
+
+#ac-form .stepcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+#ac-form .stepcontent img {#ac-form-login > div
+}
+
+#ac-form .stepcontent h2 {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size:31px;
+  font-weight:700;
+  line-height:39px;
+  margin: 0px 0px 50px 0px !important;
+  padding: 0px 15px;
+  text-align: center;
+}
+
+#ac-form .stepcontent h2 span {
+  color: red;
+}
+
+#ac-form .stepcontent h3 {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 37px;
+  padding: 0px 0px 20px;
+  margin: 0px 0px 20px;
+  position: relative;
+}
+
+#ac-form .stepcontent h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 60px;
+  background-color: #000;
+  bottom: 0px;
+  left: 0px;
+}
+
+#ac-form .stepcontent p {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0px;
+}
+
+#ac-form .stepcontent .boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  padding: 0px 30px;
+}
+
+#ac-form .stepcontent .boxes .box {
+  border: 2px solid #000;
+  margin: 0px 5px 5px 5px;
+  width: calc(33.33% - 10px);
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  #ac-form .stepcontent .boxes {
+    flex-direction: column;
+  }
+  
+  #ac-form .stepcontent .boxes .box {
+    width: calc(100% - 10px);
+  }
+}
+
+#ac-form .stepcontent input[type="checkbox"] {
+  width: 40px;
+  height: 40px;
+  appearance: none;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  border: 1px solid #f70502;
+  display: inline-block;
+  margin: 0px 0px 10px 0px;
+}
+
+#ac-form .stepcontent.step2 input[type="checkbox"],
+#ac-form .stepcontent.step3 input[type="checkbox"],
+#ac-form .stepcontent.step4 input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+}
+
+#ac-form .stepcontent input[type="checkbox"]:checked {
+  background: #f70502 url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/check.png') center center no-repeat;
+  background-size: cover;
+  border: 1px solid #f70502;
+}
+#ac-form .stepcontent .columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#ac-form .stepcontent.step4 .columns {
+  justify-content: center; 
+}
+
+#ac-form .stepcontent .columns label {
+  display: block;
+  margin: 0px 7px 5px 7px;
+  width: calc(25% - 14px);
+  padding: 0px 0px 50px 40px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+#ac-form .stepcontent.step5 .columns label {
+  width: calc(50% - 28px);
+    padding: 0px;
+    margin: 0px 14px 20px 14px;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  #ac-form .stepcontent .columns  {
+    flex-direction: column;
+  }
+  
+  #ac-form .stepcontent .columns label  {
+    width: calc(100% - 14px);
+    padding-left: 90px;
+    padding-right: 10px;
+  }
+
+  #ac-form .stepcontent.step5 .columns {
+    padding: 30px;
+  }
+
+  #ac-form .stepcontent.step5 .columns label {
+    width: calc(100% - 14px);
+  }
+}
+
+#ac-form .stepcontent.step5 .columns label b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#ac-form .stepcontent .columns label input[type="text"],
+#ac-form .stepcontent .columns label input[type="tel"],
+#ac-form .stepcontent .columns label input[type="url"],
+#ac-form .stepcontent .columns label select {
+    border: none;
+    padding: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+    color: #9d9d9c;
+    margin-right: -4px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #cecece;
+}
+
+#ac-form .stepcontent .columns label input[type="checkbox"] {
+  position: absolute;
+  left: 0px;
+  top: -5px;
+}
+
+#ac-form .stepcontent.step5 .columns label input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin: 0px;
+}
+
+
+@media (max-width: 800px) {  
+  #ac-form .stepcontent .columns label input[type="checkbox"] {
+    left: 18px;
+  }
+}
+
+#ac-form .stepcontent.step5 input[type=text],
+#ac-form .stepcontent.step5 input[type=tel],
+#ac-form .stepcontent.step5 input[type=url],
+#ac-form .stepcontent.step5 select {
+  width: 100%;
+}
+
+#ac-form .stepcontent button {
+  border: none;
+  background: #ff0000;
+  background: -webkit-linear-gradient(135deg, #ff0000 30%, #ac196d 100%);
+  background: linear-gradient(135deg, #ff0000 30%, #ac196d 100%);
+  padding: 22px 70px 23px 50px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  color: #fff;
+  position: relative;
+  border-radius: 0px;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+#ac-form .stepcontent button:hover {
+  background: -webkit-linear-gradient(-135deg, #ff0000 30%, #ac196d 100%);
+  background: linear-gradient(-135deg, #ff0000 30%, #ac196d 100%);
+}
+
+#ac-form .stepcontent button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: 35px;
+  width: 9px;
+  height: 13px;
+  background: transparent url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/continue.png') center center no-repeat;
+}
+
+#ac-form .stepcontent button:disabled {
+  opacity: 0.5;
+}
+
+#ac-form .stepcontent.step5 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+#ac-form .stepcontent.step5 p.minilegal {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #cecece;
+  height: 70px;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+
+#ac-form .stepcontent nav {
+  border-top: 1px solid #ebebeb;
+  padding: 20px 0px;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {  
+  #ac-form .stepcontent nav {
+    padding: 20px 20px;
+  }
+}
+
+#ac-form .stepcontent nav div:nth-child(1) img {
+  width: 50px;
+  height: 50px;
+}
+
+#ac-form .stepcontent nav div:nth-child(2) {
+  text-align: right;
+}
+
+#ac-form .stepcontent nav div:nth-child(2) button {
+  display: block;
+  margin-bottom: 20px;
+}
+
+p.ok,
+p.error {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 60px;
+  background-color: #81d742;
+  border-radius: 3px;
+  margin: 0px 0px 60px;
+  position: relative;
+  max-width: 720px;
+}
+
+p.ok:after,
+p.error:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -16px ;
+  right: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  background: transparent url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/ok.png') center center no-repeat;
+}
+
+p.error {
+  background-color: #dd3333;
+}
+
+p.error:after {
+  background-image: url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/error.png');
+}
+
+#maintitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 10px 30px;
+  background-color: #eeefef;
+  overflow: hidden;
+}
+
+#maintitle p {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+}
+
+#thankscontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 66vh;
+  background: #00ffff;
+  background: -webkit-linear-gradient(top, rgb(255, 0, 0) 10%, rgb(172, 25, 108) 100%);
+  background: linear-gradient(top, rgb(255, 0, 0) 10%, rgb(172, 25, 108) 100%);
+}
+
+#thankscontent img {
+  max-width: 100px;
+  margin: 0px 0px 20px 0px;
+}
+
+#thankscontent h1 {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 31px;
+  font-weight: 700;
+  line-height:39px;
+  color: #fff;
+  max-width: 585px;
+  padding: 0px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
+  text-align: center;
+  position: relative;
+}
+
+#thankscontent h1:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 200px;
+  background-color: #fff;
+  bottom: 0px;
+  left: calc(50% - 100px);
+}
+
+#thankscontent h2 {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #fff;
+  max-width: 585px;
+  padding: 0px;
+  margin: 0px 0px 30px;
+  text-align: center;
+}
+
+#thankscontent p {
+  font-family: 'Ubuntu', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+  text-align: center;
+  max-width: 585px;
+  padding: 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+
+#thankscontent em {
+  font-size: 16px;
+  line-height: 25px; 
+}
+</style>
