@@ -15,10 +15,9 @@
  */
 
 //ini_set("display_errors", 1);
-
-define('AC_API_DOMAIN', ''); 
-define('AC_API_TOKEN', '');
-//print_pre(acGetTags());
+define('AC_VER', '1.0'); 
+define('AC_API_DOMAIN', 'https://xxx.api-us1.com'); 
+define('AC_API_TOKEN', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
 
 //Cargamos el multi-idioma
 function ac_plugins_loaded() {
@@ -26,11 +25,21 @@ function ac_plugins_loaded() {
 }
 add_action('plugins_loaded', 'ac_plugins_loaded', 0 );
 
+//Precargamos los estilos y los script
+function ac_wp_enqueue_scripts() {
+  wp_register_style('ac-update-forms-style', plugins_url( '/assets/style.css', __FILE__ ), array(), AC_VER, 'all' );
+  wp_register_script('ac-update-forms-script',  plugins_url( '/assets/script.js', __FILE__ ), array('jquery'), AC_VER, true);
+}
+add_action( 'wp_enqueue_scripts', 'ac_wp_enqueue_scripts' );
+
+
 //Shortocodes --------------------------------------------------------------
 function ac_update_forms_shortcode($params = array(), $content = null) {
   global $post;
+  $plugin_dir_url = plugin_dir_url( __FILE__ );
   ob_start(); 
 
+  include(dirname(__FILE__)."/inc/libs.php");
   include(dirname(__FILE__)."/inc/fields.php");
   //print_pre($_REQUEST);
 
@@ -182,17 +191,15 @@ function ac_update_forms_shortcode($params = array(), $content = null) {
       }
       include(dirname(__FILE__)."/inc/ac-form.php");     
     } else {
-      ?><p class="error"><?php _e('Datos de acceso incorrectos.', 'ac-update-forms'); ?></p><?php
+      $error_access = true;
       include(dirname(__FILE__)."/inc/ac-form-login.php");
     }
   } else { //Sacamos el miniformulario para pedir el email --------------------------------------------------
     include(dirname(__FILE__)."/inc/ac-form-login.php");
   } 
-  include(dirname(__FILE__)."/inc/style.php"); 
+  wp_enqueue_style('ac-update-forms-style');
+   
   $html = ob_get_clean(); 
   return $html;
 }
 add_shortcode('ac-update-forms', 'ac_update_forms_shortcode');
-
-
-include(dirname(__FILE__)."/inc/libs.php");

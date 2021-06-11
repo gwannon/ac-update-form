@@ -1,4 +1,3 @@
-<style>
 #logincontent {
   display: flex;
   flex-direction: column;
@@ -71,6 +70,7 @@
   color: #fff;
   position: relative;
   border-radius: 0px;
+  outline: none;
 }
 
 #ac-form-login button:after {
@@ -81,7 +81,7 @@
   right: 35px;
   width: 22px;
   height: 21px;
-  background: transparent url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/arrow.png') center center no-repeat;s
+  background: transparent url('./arrow.png') center center no-repeat;
 }
 
 @media (max-width: 455px) {
@@ -111,9 +111,6 @@
   margin: 0px auto;
   width: 100%;
   max-width: 1200px;
-}
-
-#ac-form .stepcontent img {#ac-form-login > div
 }
 
 #ac-form .stepcontent h2 {
@@ -210,7 +207,7 @@
 }
 
 #ac-form .stepcontent input[type="checkbox"]:checked {
-  background: #f70502 url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/check.png') center center no-repeat;
+  background: #f70502 url('./check.png') center center no-repeat;
   background-size: cover;
   border: 1px solid #f70502;
 }
@@ -334,6 +331,7 @@
   border-radius: 0px;
   transition: background 0.3s;
   margin-bottom: 20px;
+  outline: none;
 }
 
 #ac-form .stepcontent button:hover {
@@ -349,7 +347,7 @@
   right: 35px;
   width: 9px;
   height: 13px;
-  background: transparent url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/continue.png') center center no-repeat;
+  background: transparent url('./continue.png') center center no-repeat;
 }
 
 #ac-form .stepcontent button:disabled {
@@ -408,10 +406,10 @@
 p.ok,
 p.error {
   text-align: center;
-  color: white;
+  color: #000;
   font-size: 20px;
   padding: 60px;
-  background-color: #81d742;
+  background-color: #4affff;
   border-radius: 3px;
   margin: 0px 0px 60px;
   position: relative;
@@ -427,15 +425,16 @@ p.error:after {
   right: calc(50% - 16px);
   width: 32px;
   height: 32px;
-  background: transparent url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/ok.png') center center no-repeat;
+  background: transparent url('./ok.png') center center no-repeat;
 }
 
 p.error {
+  color: #fff;
   background-color: #dd3333;
 }
 
 p.error:after {
-  background-image: url('<?php echo plugin_dir_url( __FILE__ ); ?>../assets/error.png');
+  background-image: url('./error.png');
 }
 
 #maintitle {
@@ -524,4 +523,3 @@ p.error:after {
   font-size: 16px;
   line-height: 25px; 
 }
-</style>

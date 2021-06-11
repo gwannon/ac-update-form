@@ -1,5 +1,5 @@
 <div class="stepcontent step<?php echo $currentstep; ?>">
-  <img src="<?php echo plugin_dir_url( __FILE__ ); ?>../../assets/step3.png" alt="" />
+  <img src="<?php echo $plugin_dir_url; ?>assets/step3.png" alt="" />
   <h2><?php _e('¿Alguna prioridad respecto a la <span>temática</span>?', 'ac-update-forms'); ?></h2>
   <input type="hidden" name="currentstep" value="3" />
   <input type="hidden" name="update" value="3" />
@@ -12,11 +12,11 @@
   </div>
   <nav>
     <div>
-      <a href="#"><img src="<?php echo plugin_dir_url( __FILE__ ); ?>../../assets/back.png" alt="" /></a>
+      <a href="#"><img src="<?php echo $plugin_dir_url; ?>assets/back.png" alt="" /></a>
     </div>
     <div>
       <button type="submit"><?php _e('Continúa avanzando', 'ac-update-forms'); ?></button>
-      <p><em><?php _e('➤  Solo te quedan 1 paso', 'ac-update-forms'); ?></em></p>
+      <p><em><?php _e('➤  Solo te queda 1 paso', 'ac-update-forms'); ?></em></p>
     </div>
   </nav>
 </div>

@@ -1,4 +1,3 @@
-<script>
   jQuery('.checkbox-boletines').click(function() {
     if(jQuery(this).is(":checked")) {
       jQuery("#"+jQuery(this).attr("id").replace("checkbox", "hidden")).val("Sí");
@@ -49,8 +48,7 @@
     jQuery(".step4 button").prop('disabled', disabled);
   });
 
-  jQuery("#ac-form .stepcontent nav div:nth-child(1) a").click(function() {
+  jQuery("#ac-form .stepcontent nav div:nth-child(1) a").click(function(event) {
     event.preventDefault();
     history.back(1);
   });
-</script>

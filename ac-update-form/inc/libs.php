@@ -17,13 +17,13 @@ function acSearchUserByEmail ($email) {   //Llamada CURL para sacar un usuario a
 
 //CAMPOs-------------------------------------------------
 
-function acGetFields() { //Llamada CURL para sacar todos los campos
+/*function acGetFields() { //Llamada CURL para sacar todos los campos
   $curl = curl_init();
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/fields?limit=100");
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   return json_decode(curl_exec($curl));
-}
+}*/
 
 function acGetUserById ($id) {
   $curl = curl_init();
@@ -99,13 +99,13 @@ function acCreateCustomFieldValueByCustomFieldId($contact_id, $field_id, $value)
 
 //TAGs-------------------------------------------------
 
-function acGetTags() { //Llamada CURL para sacar todos los tags
+/*function acGetTags() { //Llamada CURL para sacar todos los tags
   $curl = curl_init();
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/tags?limit=100");
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   return json_decode(curl_exec($curl))->tags;
-}
+}*/
 
 function acGetUserTagsById ($id) {
   $curl = curl_init();

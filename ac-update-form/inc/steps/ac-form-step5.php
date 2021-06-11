@@ -1,6 +1,9 @@
 <div class="stepcontent step<?php echo $currentstep; ?> flex">
 
-  <h2><?php _e('Guarda tu <span>perfil</span>', 'ac-update-forms'); ?></h2>
+  <div>
+    <h2 style="margin-bottom: 10px !important;"><?php _e('Guarda tu <span>perfil</span>', 'ac-update-forms'); ?></h2><br/>
+    <p style="margin-bottom: 50px;"><?php _e('Cuanta más información completes mejor te informaremos.', 'ac-update-forms'); ?></p>
+  </div>
   <input type="hidden" name="currentstep" value="5" />
   <input type="hidden" name="update" value="5" />
   <div class="columns">

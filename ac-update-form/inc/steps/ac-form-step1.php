@@ -1,5 +1,5 @@
 <div class="stepcontent step<?php echo $currentstep; ?>">
-  <img src="<?php echo plugin_dir_url( __FILE__ ); ?>../../assets/step1.png" alt="" />
+  <img src="<?php echo $plugin_dir_url; ?>assets/step1.png" alt="" />
   <h2><?php _e('¿Te gustaría recibir <span>todos los boletines</span>?', 'ac-update-forms'); ?></h2>
   <input type="hidden" name="currentstep" value="1" />
   <input type="hidden" name="update" value="1" />

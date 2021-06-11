@@ -1,5 +1,5 @@
 <div class="stepcontent step<?php echo $currentstep; ?>">
-  <img src="<?php echo plugin_dir_url( __FILE__ ); ?>../../assets/step2.png" alt="" />
+  <img src="<?php echo $plugin_dir_url; ?>assets/step2.png" alt="" />
   <h2><?php _e('¿Con cuál de nuestros <span>perfiles de empresa</span> te identificas?', 'ac-update-forms'); ?></h2>
 
 
@@ -14,7 +14,7 @@
   </div>
   <nav>
     <div>
-      <a href="#"><img src="<?php echo plugin_dir_url( __FILE__ ); ?>../../assets/back.png" alt="" /></a>
+      <a href="#"><img src="<?php echo $plugin_dir_url; ?>assets/back.png" alt="" /></a>
     </div>
     <div>
       <button type="submit"><?php _e('Continúa avanzando', 'ac-update-forms'); ?></button>

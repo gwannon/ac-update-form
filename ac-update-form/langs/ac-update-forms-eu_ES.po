@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ac-update-forms\n"
-"POT-Creation-Date: 2021-06-09 12:52+0200\n"
-"PO-Revision-Date: 2021-06-09 12:53+0200\n"
+"POT-Creation-Date: 2021-06-11 11:44+0200\n"
+"PO-Revision-Date: 2021-06-11 12:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: jorge@enutt.net\n"
 "Language: eu_ES\n"
@@ -15,49 +15,54 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../ac-update-form.php:185
-msgid "Datos de acceso incorrectos."
-msgstr ""
-
-#: ../inc/ac-form-login.php:11
+#: ../inc/ac-form-login.php:18 ../inc/ac-form-login.php:19
 msgid "Aquí puedes actualizar tus preferencias de suscripción a Grupo SPRI"
 msgstr "Hemen eguneratu ditzakezu SPRI Talderako harpidetzaren lehentasunak"
 
-#: ../inc/ac-form-login.php:12
+#: ../inc/ac-form-login.php:21
 msgid ""
 "Para actualizar tus preferencias de suscripción, comprueba tu correo "
 "electrónico porque te hemos enviado un mensaje con los pasos para poder "
 "hacerlo."
 msgstr ""
 "Zure harpidetzaren lehentasunak eguneratzeko, begiratu zure posta "
-"elektronikoa; mezu bat bidali dizugu eguneraketa egiteko pausoekin."
+"elektronikoa, mezu bat bidali dizugulako eguneraketa egiteko pausoekin."
 
-#: ../inc/ac-form-login.php:14
+#: ../inc/ac-form-login.php:23
 msgid ""
 "Email incorrecto. El email suministrado no está en nuestra base de datos."
 msgstr ""
+"Posta elektronikoa ez da zuzena. Eman diguzun posta elektronikoa ez dago "
+"gure datu-basean."
 
-#: ../inc/ac-form-login.php:17
+#: ../inc/ac-form-login.php:26
 msgid "Email incorrecto. El email suministrado no tiene el formato adecuado."
 msgstr ""
+"Posta elektronikoa ez da zuzena. Eman diguzun posta elektronikoaren formatua "
+"ez da egokia."
 
-#: ../inc/ac-form-login.php:21 ../inc/ac-form.php:4
+#: ../inc/ac-form-login.php:28
+msgid "Datos de acceso incorrectos."
+msgstr "Sartzeko datuak ez dira zuzenak."
+
+#: ../inc/ac-form-login.php:32 ../inc/ac-form.php:4
 msgid "Personaliza tus boletines"
-msgstr "Pertsonalizatu zure buletinak"
+msgstr "Pertsonalizatu zure buletinak."
 
-#: ../inc/ac-form-login.php:22
+#: ../inc/ac-form-login.php:33
 msgid "Empieza a recibir los boletines según tus preferencias."
-msgstr ""
+msgstr "Jaso zure lehentasunen arabera osatutako buletinak."
 
-#: ../inc/ac-form-login.php:22
+#: ../inc/ac-form-login.php:33
 msgid "Indícanos tu <b>email</b> para verificar que realmente eres tú."
 msgstr ""
+"Adierazi zure <b>posta elektronikoa</b> benetan zu zarela egiazta dezagun."
 
-#: ../inc/ac-form-login.php:24 ../inc/steps/ac-form-step5.php:7
+#: ../inc/ac-form-login.php:35 ../inc/steps/ac-form-step5.php:10
 msgid "Email"
-msgstr ""
+msgstr "Posta elektronikoa"
 
-#: ../inc/ac-form-login.php:25
+#: ../inc/ac-form-login.php:36
 msgid "Enviar"
 msgstr "Bidali"
 
@@ -66,6 +71,8 @@ msgid ""
 "Indícanos las temáticas y productos de Grupo SPRI que más interesan y "
 "empieza a recibir los boletines según tus preferencias."
 msgstr ""
+"Adierazi gehien interesatzen zaizkizun SPRI Taldearen gaiak eta produktuak, "
+"eta jaso zure lehentasunen arabera osatutako buletinak."
 
 #: ../inc/fields.php:5
 msgid "Nombre"
@@ -81,159 +88,159 @@ msgstr "Telefonoa"
 
 #: ../inc/fields.php:15
 msgid "Tratamiento"
-msgstr ""
+msgstr "Tratamendua"
 
 #: ../inc/fields.php:16
 msgid "Sr."
-msgstr ""
+msgstr "jn."
 
 #: ../inc/fields.php:17
 msgid "Sra."
-msgstr ""
+msgstr "and."
 
 #: ../inc/fields.php:19
 msgid "DNI/CIF/Pasaporte"
-msgstr ""
+msgstr "NAN / IFK / pasaportea"
 
 #: ../inc/fields.php:20
 msgid "Provincia"
-msgstr ""
+msgstr "Probintzia"
 
 #: ../inc/fields.php:21
 msgid "Bizkaia"
-msgstr ""
+msgstr "Bizkaia"
 
 #: ../inc/fields.php:22
 msgid "Gipuzkoa"
-msgstr ""
+msgstr "Gipuzkoa"
 
 #: ../inc/fields.php:23
 msgid "Araba"
-msgstr ""
+msgstr "Araba"
 
 #: ../inc/fields.php:24 ../inc/fields.php:55
 msgid "Otros"
-msgstr ""
+msgstr "Beste batzuk"
 
 #: ../inc/fields.php:26
 msgid "Nombre de empresa"
-msgstr ""
+msgstr "Enpresaren izena"
 
 #: ../inc/fields.php:27
 msgid "CIF"
-msgstr ""
+msgstr "IFK"
 
 #: ../inc/fields.php:28
 msgid "Perfíl de Linkedin"
-msgstr ""
+msgstr "Linkedin-eko profila"
 
 #: ../inc/fields.php:29
 msgid "Sector"
-msgstr ""
+msgstr "Sektorea"
 
 #: ../inc/fields.php:30
 msgid "Administración gubernamental"
-msgstr ""
+msgstr "Gobernu-administrazioa"
 
 #: ../inc/fields.php:31
 msgid "Aeronáutica/Aviación"
-msgstr ""
+msgstr "Aeronautika / Abiazioa"
 
 #: ../inc/fields.php:32
 msgid "Alimentación"
-msgstr ""
+msgstr "Elikadura"
 
 #: ../inc/fields.php:33
 msgid "Automoción"
-msgstr ""
+msgstr "Automozioa"
 
 #: ../inc/fields.php:34
 msgid "Banca de inversiones"
-msgstr ""
+msgstr "Inbertsio-banka"
 
 #: ../inc/fields.php:35
 msgid "Biosalud"
-msgstr ""
+msgstr "Bio-osasuna"
 
 #: ../inc/fields.php:36
 msgid "Capital de riesgo y capital privado"
-msgstr ""
+msgstr "Arrisku kapitala eta kapital pribatua"
 
 #: ../inc/fields.php:37
 msgid "Construcción"
-msgstr ""
+msgstr "Eraikuntza"
 
 #: ../inc/fields.php:38
 msgid "Contenidos digitales"
-msgstr ""
+msgstr "Eduki digitalak"
 
 #: ../inc/fields.php:39
 msgid "Energía"
-msgstr ""
+msgstr "Energia"
 
 #: ../inc/fields.php:40
 msgid "Equipos Ferroviarios"
-msgstr ""
+msgstr "Trenbide-ekipoak"
 
 #: ../inc/fields.php:41
 msgid "Fundición"
-msgstr ""
+msgstr "Galdaketa"
 
 #: ../inc/fields.php:42
 msgid "Industrías Marítimas"
-msgstr ""
+msgstr "Itsas industriak"
 
 #: ../inc/fields.php:43
 msgid "Investigación"
-msgstr ""
+msgstr "Ikerketa"
 
 #: ../inc/fields.php:44
 msgid "Maquinaria"
-msgstr ""
+msgstr "Makinak"
 
 #: ../inc/fields.php:45
 msgid "Medioambiente"
-msgstr ""
+msgstr "Ingurumena"
 
 #: ../inc/fields.php:46
 msgid "Papel"
-msgstr ""
+msgstr "Papera"
 
 #: ../inc/fields.php:47
 msgid "Petróleo y energía"
-msgstr ""
+msgstr "Petrolioa eta energia"
 
 #: ../inc/fields.php:48
 msgid "Seguridad del ordenador y de las redes"
-msgstr ""
+msgstr "Ordenagailuaren eta sareen segurtasuna"
 
 #: ../inc/fields.php:49
 msgid "Servicios y tecnologías de la información"
-msgstr ""
+msgstr "Informazio-zerbitzuak eta -teknologiak"
 
 #: ../inc/fields.php:50
 msgid "Siderurgia"
-msgstr ""
+msgstr "Siderurgia"
 
 #: ../inc/fields.php:51
 msgid "Tec. Av. Fabricación"
-msgstr ""
+msgstr "Fabrikazioko teknologia aurreratuak"
 
 #: ../inc/fields.php:52
 msgid "Telecomunicaciones"
-msgstr ""
+msgstr "Telekomunikazioak"
 
 #: ../inc/fields.php:53
 msgid "Transporte, movilidad y logística"
-msgstr ""
+msgstr "Garraioa, mugikortasuna eta logistika"
 
 #: ../inc/fields.php:54
 msgid "Videojuegos"
-msgstr ""
+msgstr "Bideojokoak"
 
 #: ../inc/fields.php:61
 msgid "Mi boletín semanal de Grupo SPRI "
-msgstr ""
+msgstr "SPRI Taldearen nire asteroko buletina"
 
 #: ../inc/fields.php:61
 msgid ""
@@ -241,193 +248,207 @@ msgid ""
 "tendencias sobre ciberseguridad, digitalización, nuevos modelos de gestión "
 "avanzada, internacionalización, emprendimiento, infraestructuras."
 msgstr ""
+"Asteko onena: elkarrizketak, albisteak, laguntzak, agenda, prestakuntza eta "
+"zibersegurtasunari, digitalizazioari, kudeaketa aurreratuko eredu berriei, "
+"nazioartekotzeari, ekintzailetzari eta azpiegiturei buruzko joerak"
 
 #: ../inc/fields.php:62
 msgid "Mi boletín mensual UP! Euskadi"
-msgstr ""
+msgstr "Nire hileroko UP! Euskadi buletina"
 
 #: ../inc/fields.php:62
 msgid ""
 "Una vez al mes la información sobre la red de Startups vascas y sus últimas "
 "innovaciones."
 msgstr ""
+"Euskal startupen sareari eta euren azken berrikuntzei buruzko informazioa "
+"hilean behin."
 
 #: ../inc/fields.php:63
 msgid "Mi boletín semanal Oferta y demanda tecnológica."
-msgstr ""
+msgstr "Eskaintza eta eskaera teknologikoaren nire asteroko buletina."
 
 #: ../inc/fields.php:63
 msgid ""
 "Cada semana las oportunidades del mercado en materia de transferencia "
 "tecnológica internacional."
 msgstr ""
+"Nazioarteko transferentzia teknologikoaren arloko merkatuko aukerak astero."
 
 #: ../inc/fields.php:69
 msgid "Ciberseguridad "
-msgstr ""
+msgstr "Zibersegurtasuna"
 
 #: ../inc/fields.php:70
 msgid "Digitalización"
-msgstr ""
+msgstr "Digitalizazioa"
 
 #: ../inc/fields.php:71
 msgid "Emprendimiento"
-msgstr ""
+msgstr "Ekintzailetza"
 
 #: ../inc/fields.php:72
 msgid "I+D"
-msgstr ""
+msgstr "I+G"
 
 #: ../inc/fields.php:73
 msgid "Innovación"
-msgstr ""
+msgstr "Berrikuntza"
 
 #: ../inc/fields.php:74
 msgid "Internacionalización"
-msgstr ""
+msgstr "Nazioartekotzea"
 
 #: ../inc/fields.php:75
 msgid "Invertir en Euskadi"
-msgstr ""
+msgstr "Euskadin Inbertitzea"
 
 #: ../inc/fields.php:76
 msgid "Invertir en inmovilizado"
-msgstr ""
+msgstr "Higiezinetan inbertitzea"
 
 #: ../inc/fields.php:77
 msgid "Relanzamiento empresarial"
-msgstr ""
+msgstr "Enpresak berrabiaraztea"
 
 #: ../inc/fields.php:78
 msgid "Sostenibilidad Medioambiental"
-msgstr ""
+msgstr "Ingurumen jasangarritasuna"
 
 #: ../inc/fields.php:79
 msgid "Fondos de Capital Riesgo"
-msgstr ""
+msgstr "Arrisku Kapitaleko Funtsak"
 
 #: ../inc/fields.php:83
 msgid "Personas emprendedoras"
-msgstr ""
+msgstr "Ekintzaileak"
 
 #: ../inc/fields.php:84
 msgid "Autonómos/as"
-msgstr ""
+msgstr "Autonomoak"
 
 #: ../inc/fields.php:85
 msgid "Micropyme (1-10 empleados/as)"
-msgstr ""
+msgstr "MikroETEak (1-10 langile)"
 
 #: ../inc/fields.php:86
 msgid "Pequeña empresa (10-50)"
-msgstr ""
+msgstr "Enpresa txikiak (10-50)"
 
 #: ../inc/fields.php:87
 msgid "Mediana empresa (50-250)"
-msgstr ""
+msgstr "Enpresa Ertainak (50-250)"
 
 #: ../inc/fields.php:88
 msgid "Gran empresa (+250)"
-msgstr ""
+msgstr "Enpresa Handiak (+250)"
 
 #: ../inc/fields.php:89
 msgid "Agentes de la RVCTI"
-msgstr ""
+msgstr "ZTBESeko agenteak"
 
 #: ../inc/fields.php:90
 msgid "Asociaciones"
-msgstr ""
+msgstr "Elkarteak"
 
 #: ../inc/fields.php:91
 msgid "Estudiantes"
-msgstr ""
+msgstr "Ikasleak"
 
 #: ../inc/fields.php:92
 msgid "Inversores"
-msgstr ""
+msgstr "Inbertitzaileak"
 
 #: ../inc/fields.php:93
 msgid "Agentes intermedios"
-msgstr ""
+msgstr "Bitarteko agenteak"
 
 #: ../inc/fields.php:104
 msgid "Castellano "
-msgstr ""
+msgstr "Gaztelania"
 
 #: ../inc/fields.php:105
 msgid "Euskera"
-msgstr ""
+msgstr "Euskara"
 
 #: ../inc/steps/ac-form-step1.php:3
 msgid "¿Te gustaría recibir <span>todos los boletines</span>?"
-msgstr ""
+msgstr "Jaso nahi dituzu <span>buletin guztiak</span>?"
 
 #: ../inc/steps/ac-form-step1.php:16 ../inc/steps/ac-form-step2.php:20
 #: ../inc/steps/ac-form-step3.php:18
 msgid "Continúa avanzando"
-msgstr ""
+msgstr "Segi aurrera"
 
 #: ../inc/steps/ac-form-step1.php:17
 msgid "➤  Solo te quedan 3 pasos"
-msgstr ""
+msgstr "➤ 3 urrats bakarrik geratzen zaizkizu"
 
 #: ../inc/steps/ac-form-step2.php:3
 msgid "¿Con cuál de nuestros <span>perfiles de empresa</span> te identificas?"
-msgstr ""
+msgstr "Gure zein enpresa-profilekin <span>identifikatzen zara</span>?"
 
 #: ../inc/steps/ac-form-step2.php:13
 msgid "Me interesa recibir la información para cualquiera de estos perfiles."
-msgstr ""
+msgstr "Profil hauetako edozeinentzako informazioa jaso nahi dut."
 
 #: ../inc/steps/ac-form-step2.php:21
 msgid "➤  Solo te quedan 2 pasos"
-msgstr ""
+msgstr "➤ 2 urrats bakarrik geratzen zaizkizu"
 
 #: ../inc/steps/ac-form-step3.php:3
 msgid "¿Alguna prioridad respecto a la <span>temática</span>?"
-msgstr ""
+msgstr "Baduzu <span>gaiei</span> buruzko lehentasunik?"
 
 #: ../inc/steps/ac-form-step3.php:11
 msgid "Me interesan los contenidos de todas estas temáticas."
-msgstr ""
+msgstr "Gai hauei guztiei buruzko edukiak interesatzen zaizkit."
 
 #: ../inc/steps/ac-form-step3.php:19
-msgid "➤  Solo te quedan 1 paso"
-msgstr ""
+msgid "➤  Solo te queda 1 paso"
+msgstr "➤ Urrats 1 bakarrik geratzen zaizkizu"
 
 #: ../inc/steps/ac-form-step4.php:3
 msgid "¿En qué <span>idioma</span> quieres recibirnos?"
-msgstr ""
+msgstr "Zein <span>hizkuntzatan</span> jaso nahi gaituzu?"
 
 #: ../inc/steps/ac-form-step4.php:13
 msgid "Seleccionar ambos"
-msgstr ""
+msgstr "Hautatu biak"
 
 #: ../inc/steps/ac-form-step4.php:22
 msgid "Para terminar, confírmanos tus datos"
-msgstr ""
+msgstr "Bukatzeko, baieztatu zure datuak"
 
-#: ../inc/steps/ac-form-step5.php:3
+#: ../inc/steps/ac-form-step5.php:4
 msgid "Guarda tu <span>perfil</span>"
-msgstr ""
+msgstr "Gorde zure <span>profila</span>"
 
-#: ../inc/steps/ac-form-step5.php:13 ../inc/steps/ac-form-step5.php:36
+#: ../inc/steps/ac-form-step5.php:5
+msgid "Cuanta más información completes mejor te informaremos."
+msgstr ""
+"Zenbat eta informazio gehiago osatu, orduan eta hobeto informatuko zaitugu."
+
+#: ../inc/steps/ac-form-step5.php:16 ../inc/steps/ac-form-step5.php:39
 #, php-format
 msgid "Elige tu %s"
-msgstr ""
+msgstr "Aukeratu zure %s"
 
-#: ../inc/steps/ac-form-step5.php:47
+#: ../inc/steps/ac-form-step5.php:50
 msgid "Protección de datos*"
-msgstr ""
+msgstr "Datuen babesa*"
 
-#: ../inc/steps/ac-form-step5.php:48
+#: ../inc/steps/ac-form-step5.php:51
 msgid ""
 "Sí, he LEÍDO y ACEPTO en todos sus términos la Información legal incluida en "
 "la <a href=\"https://www.spri.eus/es/politica-de-privacidad/\">política de "
 "privacidad</a>"
 msgstr ""
+"Bai, IRAKURRI DUT eta ONARTZEN DUT <a href=\"https://www.spri.eus/"
+"pribatutasun-politika/\">pribatutasun politikan</a> jasota dagoen legezko "
+"informazio guztia"
 
-#: ../inc/steps/ac-form-step5.php:49
+#: ../inc/steps/ac-form-step5.php:52
 msgid ""
 "SPRI-Agencia Vasca de Desarrollo Empresarial (www.spri.eus), como "
 "responsable del tratamiento y con quien puede contactar mediante el mail "
@@ -437,29 +458,36 @@ msgid ""
 "información ampliada respecto a las finalidades y legitimación del "
 "tratamiento puede dirigirse a esta página."
 msgstr ""
+"SPRI-Enpresen Garapenerako Euskal Agentziak (www.spri.eus), tratamenduaren "
+"arduraduna den aldetik (harekin harremanetan jartzeko, idatzi helbide "
+"honetara: lopd@spri.eus ), zure datu pertsonalak jasotzen ditu, gure "
+"zerbitzu eta laguntza programei buruzko arreta egokia emateko. Dagozkizun "
+"eskubideen xehetasunak ezagutzeko eta tratamendu horren helburuei eta "
+"zilegitasunari buruzko informazio gehiago izateko, zoaz orrialde honetara."
 
-#: ../inc/steps/ac-form-step5.php:52
+#: ../inc/steps/ac-form-step5.php:55
 msgid "Guarda tu perfil"
-msgstr ""
+msgstr "Gorde zure profila"
 
 #: ../inc/steps/ac-form-step6.php:3
 #, php-format
 msgid "Gracias por tu interés en nuestras comunicaciones %s"
-msgstr ""
+msgstr "Eskerrik asko gure komunikazioetan erakutsi duzun interesagatik %s"
 
 #: ../inc/steps/ac-form-step6.php:4
 msgid ""
 "Has completado tu suscripción correctamente. Ahora sí podemos mantenerte al "
 "día."
 msgstr ""
+"Ongi bete duzu harpidetza. Orain gure aktualitatearen berri eman diezazukegu."
 
 #: ../inc/steps/ac-form-step6.php:5
 msgid "¡Gracias por tu confianza!"
-msgstr ""
+msgstr "Eskerrik asko zure konfiantzagatik!"
 
 #: ../inc/steps/ac-form-step6.php:6
 msgid "Equipo de Comunicación del Grupo SPRI"
-msgstr ""
+msgstr "SPRI Taldeko komunikazio taldea"
 
 #~ msgid "Tu información de contacto ha sido actualizada."
 #~ msgstr "Zure harremanetarako informazioa eguneratu da."

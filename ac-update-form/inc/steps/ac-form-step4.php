@@ -1,5 +1,5 @@
 <div class="stepcontent step<?php echo $currentstep; ?>">
-  <img src="<?php echo plugin_dir_url( __FILE__ ); ?>../../step4.png" alt="" />
+  <img src="<?php echo $plugin_dir_url; ?>assets/step4.png" alt="" />
   <h2><?php _e('¿En qué <span>idioma</span> quieres recibirnos?', 'ac-update-forms'); ?></h2>
 
 
@@ -16,7 +16,7 @@
   
   <nav>
     <div>
-      <a href="#"><img src="<?php echo plugin_dir_url( __FILE__ ); ?>../../assets/back.png" alt="" /></a>
+      <a href="#"><img src="<?php echo $plugin_dir_url; ?>assets/back.png" alt="" /></a>
     </div>
     <div>
       <button type="submit"<?php echo ($disabled ? " disabled='disabled'" : "") ?>><?php _e('Para terminar, confírmanos tus datos', 'ac-update-forms'); ?></button>
