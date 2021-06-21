@@ -3,7 +3,7 @@
  * Plugin Name: ActiveCampignUpdateForm
  * Plugin URI:  https://www.enutt.net/
  * Description: Formulario para actualizar los datos de los usuarios de Active Campaign de SPRI
- * Version:     1.0
+ * Version:     1.1
  * Author:      Eñutt
  * Author URI:  https://www.enutt.net/
  * License:     GNU General Public License v2 or later
@@ -15,9 +15,9 @@
  */
 
 //ini_set("display_errors", 1);
-define('AC_VER', '1.0'); 
+define('AC_VER', '1.1'); 
 define('AC_API_DOMAIN', 'https://xxx.api-us1.com'); 
-define('AC_API_TOKEN', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+define('AC_API_TOKEN', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
 
 //Cargamos el multi-idioma
 function ac_plugins_loaded() {
@@ -88,16 +88,24 @@ function ac_update_forms_shortcode($params = array(), $content = null) {
         if($currentstep == 5) {
           //Actualizamos los datos principales
           $contact = acUpdateFieldsByUserId($contact->id, $_REQUEST['ac']['data']);
+          $myFields = acGetFieldsByUserId($contact->id);
+          //print_pre($fields); die;
 
           //Actualizamos los campos extras
           foreach ($_REQUEST['ac']['field'] as $key => $value) {
             $temp = explode("-", $key);
             if($temp[0] == 'create') $result = acCreateCustomFieldValueByCustomFieldId($contact->id, $temp[1], $value);
-            else $result = acUpdateCustomFieldValueByCustomFieldId($temp[0], $contact->id, $temp[1], $value);
+            else {
+              foreach ($myFields as $myField) {
+                if ($myField->field == $temp[1] && $myField->value != $value) {
+                  $result = acUpdateCustomFieldValueByCustomFieldId($temp[0], $contact->id, $temp[1], $value);
+                  break;
+                }
+              }
+            }
           }
 
           //Metemos la fecha de última actualización 243957-39
-          $myFields = acGetFieldsByUserId($contact->id); 
           $control = 'create';
           foreach ($myFields as $myField) {
             if ($myField->field == 39) {
@@ -109,6 +117,10 @@ function ac_update_forms_shortcode($params = array(), $content = null) {
           if($control == 'create') {
             $result = acCreateCustomFieldValueByCustomFieldId($contact->id, 39, date("Y-m-d"));
           }
+
+
+          //Borramos los cacheos
+          acDeleteCache ($contact->id);
         }
       } 
       

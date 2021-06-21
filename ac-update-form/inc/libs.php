@@ -12,6 +12,7 @@ function acSearchUserByEmail ($email) {   //Llamada CURL para sacar un usuario a
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/contacts?search=".$email);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
+  acRegisterApi("/api/3/contacts?search=".$email." GET");
   return json_decode(curl_exec($curl))->contacts;
 }
 
@@ -22,23 +23,45 @@ function acSearchUserByEmail ($email) {   //Llamada CURL para sacar un usuario a
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/fields?limit=100");
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
+  acRegisterApi("/api/3/fields?limit=100"." GET");
   return json_decode(curl_exec($curl));
 }*/
 
 function acGetUserById ($id) {
+  $file = dirname(__FILE__)."/cache/".$id.".json";
+  if (file_exists($file) && time()-filemtime($file) < 240) { //Si es menos de 5 minutos usamos el cacheo
+    return json_decode(file_get_contents($file));
+  }
   $curl = curl_init();
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/contacts/".$id);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
-  return json_decode(curl_exec($curl))->contact;
+  acRegisterApi("/api/3/contacts/".$id." GET");
+  $json = json_decode(curl_exec($curl))->contact;
+  //Cacheamos el fichero de respuesta
+  $f = fopen($file, "w+");
+  fwrite($f, json_encode($json));
+  fclose($f);
+  return $json;
 } 
 
 function acGetFieldsByUserId($id) {
+  $file = dirname(__FILE__)."/cache/fieldValues".$id.".json";
+  if (file_exists($file) && time()-filemtime($file) < 240) { //Si es menos de 5 minutos segundos usamos el cacheo
+    return json_decode(file_get_contents($file));
+  }
+
   $curl = curl_init();
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/contacts/".$id."/fieldValues");
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
-  return json_decode(curl_exec($curl))->fieldValues;  
+  acRegisterApi("/api/3/contacts/".$id."/fieldValues"." GET");
+  $json = json_decode(curl_exec($curl))->fieldValues;
+  //Cacheamos el fichero de respuesta
+  $f = fopen($file, "w+");
+  fwrite($f, json_encode($json));
+  fclose($f);
+  return $json;  
 }
 
 function acUpdateFieldsByUserId($id, $data) {
@@ -55,7 +78,8 @@ function acUpdateFieldsByUserId($id, $data) {
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
   curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  acRegisterApi("/api/3/contacts/".$id." PUT");
   return json_decode(curl_exec($curl))->contact;
 }
 
@@ -74,7 +98,8 @@ function acUpdateCustomFieldValueByCustomFieldId($id, $contact_id, $field_id, $v
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
   curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  acRegisterApi("/api/3/fieldValues/".$id." PUT");
   return json_decode(curl_exec($curl));
 }
 
@@ -93,7 +118,8 @@ function acCreateCustomFieldValueByCustomFieldId($contact_id, $field_id, $value)
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
   curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  acRegisterApi("/api/3/fieldValues"." POST");
   return json_decode(curl_exec($curl));
 }
 
@@ -104,15 +130,30 @@ function acCreateCustomFieldValueByCustomFieldId($contact_id, $field_id, $value)
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/tags?limit=100");
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
+  acRegisterApi("/api/3/tags?limit=100"." GET");
   return json_decode(curl_exec($curl))->tags;
 }*/
 
 function acGetUserTagsById ($id) {
+
+  $file = dirname(__FILE__)."/cache/contactTags".$id.".json";
+  if (file_exists($file) && time()-filemtime($file) < 240) { //Si es menos de 5 minutos segundos usamos el cacheo
+    return json_decode(file_get_contents($file));
+  }
+
   $curl = curl_init();
   curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/contacts/".$id."/contactTags");
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
-  return json_decode(curl_exec($curl))->contactTags;
+  acRegisterApi("/api/3/contacts/".$id."/contactTags"." GET");
+  
+  $json = json_decode(curl_exec($curl))->contactTags;
+  //Cacheamos el fichero de respuesta
+  $f = fopen($file, "w+");
+  fwrite($f, json_encode($json));
+  fclose($f);
+  
+  return $json;
 } 
 
 function acAddTagUser($contact_id, $tag_id) {
@@ -128,7 +169,8 @@ function acAddTagUser($contact_id, $tag_id) {
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
   curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  acRegisterApi("/api/3/contactTags"." POST");
   return json_decode(curl_exec($curl))->contactTag;
 }
 
@@ -139,5 +181,23 @@ function acDeleteTagUser($id) {
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'DELETE');
+  acRegisterApi("/api/3/contactTags/".$id." GET");
   return json_decode(curl_exec($curl));
+}
+
+function acRegisterApi($string) {
+  $f = fopen(dirname(__FILE__)."/log_api.txt", "a+");
+  fwrite($f, $string.PHP_EOL);
+  fclose($f);
+
+}
+
+function acDeleteCache ($contact_id) {
+  //Borramos los cacheos
+  $file = dirname(__FILE__)."/cache/fieldValues".$contact_id.".json";
+  unlink($file);
+  $file = dirname(__FILE__)."/cache/contactTags".$contact_id.".json";
+  unlink($file);
+  $file = dirname(__FILE__)."/cache/".$contact_id.".json";
+  unlink($file);
 }
