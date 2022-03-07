@@ -8,7 +8,7 @@
       <label><input type="checkbox" class="checkbox-tag-intereses" id="checkbox-tag-<?php echo $tag['id']; ?>" name="ac[tags][<?php echo $tag['id']; ?>][status]" value="add" <?php echo ($tag['has_tag'] == true ? "checked" : "") ?> /> <?php echo $tag['text']; ?></label>
       <input type="hidden" id="hidden-tag-<?php echo $tag['id']; ?>" name="ac[tags][<?php echo $tag['id']; ?>][tag]" value="<?php echo $tag['my_tag']; ?>" />
     <?php } } ?>
-    <label><input type="checkbox" id="select-all-intereses" /> <?php _e('Me interesan los contenidos de todas estas temáticas.', 'ac-update-forms'); ?></label>
+    <label style="width: calc(50% - 14px);"><input type="checkbox" id="select-all-intereses" /> <?php _e('Me interesan los contenidos de todas estas temáticas.', 'ac-update-forms'); ?></label>
   </div>
   <nav>
     <div>

@@ -1,11 +1,9 @@
-<?php
-
-//LIBs -----------------------------------------------------------------------
-function print_pre($string) {
+<?php //LIBs -----------------------------------------------------------------------
+/* function print_pre($string) {
   echo "<pre>";
   print_r ($string);	
   echo "</pre>";
-} 
+} */
 
 function acSearchUserByEmail ($email) {   //Llamada CURL para sacar un usuario a partir de su email
   $curl = curl_init();
@@ -186,10 +184,9 @@ function acDeleteTagUser($id) {
 }
 
 function acRegisterApi($string) {
-  $f = fopen(dirname(__FILE__)."/log_api.txt", "a+");
+  /*$f = fopen(dirname(__FILE__)."/log_api.txt", "a+");
   fwrite($f, $string.PHP_EOL);
-  fclose($f);
-
+  fclose($f);*/
 }
 
 function acDeleteCache ($contact_id) {
@@ -201,3 +198,28 @@ function acDeleteCache ($contact_id) {
   $file = dirname(__FILE__)."/cache/".$contact_id.".json";
   unlink($file);
 }
+
+
+
+
+
+
+function acAddAutomationUser($contact_id, $automation_id) {
+  $curl = curl_init();
+  $json = '{
+    "contactAutomation": {
+      "contact": "'.$contact_id.'",
+      "automation": "'.$automation_id.'"
+    }
+  }';
+  curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/contactAutomations");
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
+  curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
+  curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
+  //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($json)));
+  acRegisterApi("/api/3/contactAutomations"." POST");
+  return json_decode(curl_exec($curl))->contacts;
+}
+
+

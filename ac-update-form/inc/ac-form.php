@@ -17,4 +17,9 @@
 <?php } else { ?>
   <?php include(dirname(__FILE__)."/steps/ac-form-step6.php"); ?>
 <?php } ?>
+<script>
+  jQuery.get( "<?php echo admin_url('admin-ajax.php')."?action=ac_process_cache&max=10"; ?>", function( data ) {
+    console.log( data );
+  });
+</script>
 <?php /*include(dirname(__FILE__)."/script.php");*/ wp_enqueue_script('ac-update-forms-script'); ?>

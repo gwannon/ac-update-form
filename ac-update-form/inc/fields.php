@@ -66,19 +66,19 @@ $fields_newsletter = array(
 
 //Etiquetas de intereses
 $tags = array (
-  array("id" => 98, "tag" => "interes-ciberseguridad", "text" => __('Ciberseguridad ', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 101, "tag" => "interes-digitalizacion", "text" => __('Digitalización', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 96, "tag" => "interes-emprendimiento", "text" =>  __('Emprendimiento', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 102, "tag" => "interes-i+d", "text" =>  __('I+D', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 97, "tag" => "interes-innovacion", "text" =>  __('Innovación', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 103, "tag" => "interes-internacionalizacion", "text" =>  __('Internacionalización', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 104, "tag" => "interes-invertir-en-euskadi", "text" =>  __('Invertir en Euskadi', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 114, "tag" => "interes-invertir-inmovilizado", "text" =>  __('Invertir en inmovilizado', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 115, "tag" => "interes-relanzamiento-empresarial", "text" =>  __('Relanzamiento empresarial', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 106, "tag" => "interes-sostenibilidad-medioambiental", "text" =>  __('Sostenibilidad Medioambiental', 'ac-update-forms'), "position" => "intereses"),
-  array("id" => 116, "tag" => "interes-fondos-capital-riesgo", "text" =>  __('Fondos de Capital Riesgo', 'ac-update-forms'), "position" => "intereses"),
-  /*array("id" => 105, "tag" => "interes-financiacion", "text" =>  __('Financiación', 'ac-update-forms'), "position" => "intereses"),*/
-  /*array("id" => 107, "tag" => "interes-infraestructuras", "text" => __('Infraestructuras', 'ac-update-forms'), "position" => "intereses"),*/
+  array("id" => 98, "tag" => "interes-ciberseguridad", "text" => __('Ciberseguridad ', 'ac-update-forms'), "position" => "intereses", "automup" => 107, "automdown" => 108),
+  array("id" => 101, "tag" => "interes-digitalizacion", "text" => __('Digitalización', 'ac-update-forms'), "position" => "intereses", "automup" => 114, "automdown" => 115),
+  array("id" => 96, "tag" => "interes-emprendimiento", "text" =>  __('Emprendimiento', 'ac-update-forms'), "position" => "intereses", "automup" => 120, "automdown" => 121),
+  array("id" => 105, "tag" => "interes-financiacion", "text" =>  __('Financiación', 'ac-update-forms'), "position" => "intereses", "automup" => 126, "automdown" => 127),
+  array("id" => 102, "tag" => "interes-i+d", "text" =>  __('I+D', 'ac-update-forms'), "position" => "intereses", "automup" => 132, "automdown" => 133),
+  array("id" => 107, "tag" => "interes-infraestructuras", "text" => __('Infraestructuras', 'ac-update-forms'), "position" => "intereses", "automup" => 138, "automdown" => 139),
+  array("id" => 97, "tag" => "interes-innovacion", "text" =>  __('Innovación', 'ac-update-forms'), "position" => "intereses", "automup" => 144, "automdown" => 145),
+  array("id" => 103, "tag" => "interes-internacionalizacion", "text" =>  __('Internacionalización', 'ac-update-forms'), "position" => "intereses", "automup" => 150, "automdown" => 151),
+  array("id" => 104, "tag" => "interes-invertir-en-euskadi", "text" =>  __('Invertir en Euskadi', 'ac-update-forms'), "position" => "intereses", "automup" => 156, "automdown" => 157),
+  array("id" => 106, "tag" => "interes-sostenibilidad-medioambiental", "text" =>  __('Sostenibilidad Medioambiental', 'ac-update-forms'), "position" => "intereses", "automup" => 162, "automdown" => 163),
+  //array("id" => 114, "tag" => "interes-invertir-inmovilizado", "text" =>  __('Invertir en inmovilizado', 'ac-update-forms'), "position" => "intereses"),
+  //array("id" => 115, "tag" => "interes-relanzamiento-empresarial", "text" =>  __('Relanzamiento empresarial', 'ac-update-forms'), "position" => "intereses"),
+  //array("id" => 116, "tag" => "interes-fondos-capital-riesgo", "text" =>  __('Fondos de Capital Riesgo', 'ac-update-forms'), "position" => "intereses"),
   
   array("id" => 117, "tag" => "empresa-personas-emprendedoras", "text" => __('Personas emprendedoras', 'ac-update-forms'), "position" => "empresa"),
   array("id" => 118, "tag" => "empresa-autonomos", "text" => __('Autonómos/as', 'ac-update-forms'), "position" => "empresa"),

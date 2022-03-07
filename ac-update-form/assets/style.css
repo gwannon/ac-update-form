@@ -223,6 +223,10 @@
   flex-wrap: wrap;
 }
 
+.step3 #ac-form .stepcontent .columns {
+  justify-content: flex-start;
+}
+
 #ac-form .stepcontent.step4 .columns {
   justify-content: center; 
 }
