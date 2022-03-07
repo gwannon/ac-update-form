@@ -9,7 +9,7 @@ function print_pre($string) {
 
 function acSearchUserByEmail ($email) {   //Llamada CURL para sacar un usuario a partir de su email
   $curl = curl_init();
-  curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/contacts?search=".$email);
+  curl_setopt($curl, CURLOPT_URL, AC_API_DOMAIN."/api/3/contacts?search=".urlencode($email));
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Api-Token: '.AC_API_TOKEN));
   acRegisterApi("/api/3/contacts?search=".$email." GET");
